@@ -121,7 +121,7 @@ const isAuthorized = (userId) => {
   return refreshTokenStore[userId] ? true : false;
 };
 
-
+app.set("view engine", "ejs");
 app.get("/", function(req, res){
   res.render('home');
 });
@@ -168,10 +168,6 @@ res.render('searchresults', {contactsdata: parsedResults});
  }
 });
          
-
-
-app.set("view engine", "ejs");
-
 
 const MongoClient = require('mongodb').MongoClient;
 

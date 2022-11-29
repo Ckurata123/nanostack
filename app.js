@@ -135,7 +135,7 @@ app.get('/admin', (req, res) => {
  if (isAuthorized(req.sessionID)) {
   res.render('admin');
  } else {
-  res.render('adminInstall');
+  res.render('admininstall');
  }
 });
 

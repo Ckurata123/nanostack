@@ -9,8 +9,9 @@
 	 </div>
    <div>
 	  <% if (contactsdata!='') { %>
-		 <table class="formresults" align="center">
-		  <tr>
+		 <table class="table" align="center">
+		 <thead>	
+		   <tr>
 			 <th>Vid</th>
 			 <th>First Name</th>
 			 <th>Email</th>
@@ -18,7 +19,8 @@
 			 <th>HubSpot Owner</th>
 			 <th>Contact URL</th>
 			</tr>
-      
+      	</thead>
+      	<tbody>	
 			<% for (var i=0; i<contactsdata.length; i++) { %>
 			<tr>
 			 <td>
@@ -53,6 +55,7 @@
 			 </td>
 			</tr>
 		       <% } %>
+		</tbody>
 		</table>
 	<% } else { %>
 	 <p>No results</p>
